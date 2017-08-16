@@ -11,9 +11,7 @@ module.exports = {
       // routes
       ['/', '/about', ...usersRoutes],
       // options
-      {
-        captureAfterTime: 1000
-      }
+      { captureAfterTime: 1000 }
     )
     config.plugins.push(plugin)
     return config

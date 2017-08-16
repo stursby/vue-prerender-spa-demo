@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <h1 @click="$router.push('/')">Vue Prerender SPA Demo</h1>
     <router-view></router-view>
   </div>
