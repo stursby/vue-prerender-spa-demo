@@ -23,6 +23,13 @@ export default {
     }
   },
 
+  head: {
+    title: {
+      inner: ' ',
+      separator: ' '
+    }
+  },
+
   async mounted() {
     const url = 'https://jsonplaceholder.typicode.com/users'
     const { data } = await axios.get(url)

@@ -5,3 +5,13 @@
     <router-link to="/">&larr; back Home</router-link>
   </div>
 </template>
+
+<script>
+export default {
+  head: {
+    title: {
+      inner: 'About'
+    }
+  }
+}
+</script>

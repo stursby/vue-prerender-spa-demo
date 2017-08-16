@@ -17,11 +17,25 @@ export default {
     }
   },
 
+  head: {
+    title() {
+      return {
+        inner: `${this.user.name}`,
+      }
+    },
+    meta() {
+      return [
+        { name: 'description', content: `${this.user.name} description goes here.` }
+      ]
+    }
+  },
+
   async mounted() {
     const { id } = this.$route.params
     const url = `https://jsonplaceholder.typicode.com/users/${id}`
     const { data } = await axios.get(url)
     this.user = data
+    this.$emit('updateHead')
   }
 }
 </script>
