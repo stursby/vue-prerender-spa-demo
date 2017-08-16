@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "poi": "^9.2.4",
+    "preload-webpack-plugin": "^1.2.3",
     "prerender-spa-plugin": "^2.1.0"
   }
 }

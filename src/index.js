@@ -5,8 +5,8 @@ import VueHead from 'vue-head'
 import App from '@/App'
 import Home from '@/components/Home'
 
-const About = () => import(/* webpackChunkName: "about" */ '@/components/About')
-const User = () => import(/* webpackChunkName: "user" */ '@/components/User')
+const About = () => import('@/components/About')
+const User = () => import('@/components/User')
 
 Vue.use(VueRouter)
 Vue.use(VueHead, {
@@ -25,8 +25,11 @@ const router = new VueRouter({
   routes
 })
 
-new Vue({
-  el: '#app',
+const root = new Vue({
   router,
   ...App
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  root.$mount('#app')
 })

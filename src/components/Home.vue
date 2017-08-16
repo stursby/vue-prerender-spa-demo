@@ -30,10 +30,14 @@ export default {
     }
   },
 
-  async mounted() {
+  mounted() {
     const url = 'https://jsonplaceholder.typicode.com/users'
-    const { data } = await axios.get(url)
-    this.users = data
+    axios.get(url).then((res) => {
+      this.users = res.data
+      // this.$nextTick(() => {
+      //   document.dispatchEvent(new Event('render-done'))
+      // })
+    })
   }
 }
 </script>

@@ -12,6 +12,12 @@ export default {
     title: {
       inner: 'About'
     }
-  }
+  },
+
+  // mounted() {
+  //   this.$nextTick(() => {
+  //     document.dispatchEvent(new Event('render-done'))
+  //   })
+  // }
 }
 </script>
