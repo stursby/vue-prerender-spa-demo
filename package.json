@@ -1,0 +1,20 @@
+{
+  "name": "vue-prerender-spa-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "poi src/index.js",
+    "build": "poi build src/index.js",
+    "deploy": "surge -p dist/ -d vue-prerender-spa-demo.surge.sh"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "vue": "^2.4.2",
+    "vue-router": "^2.7.0"
+  },
+  "devDependencies": {
+    "poi": "^9.2.4",
+    "prerender-spa-plugin": "^2.1.0"
+  }
+}
