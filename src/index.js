@@ -3,8 +3,9 @@ import VueRouter from 'vue-router'
 
 import App from '@/App'
 import Home from '@/components/Home'
-import About from '@/components/About'
-import User from '@/components/User'
+
+const About = () => import(/* webpackChunkName: "about" */ '@/components/About')
+const User = () => import(/* webpackChunkName: "user" */ '@/components/User')
 
 Vue.use(VueRouter)
 

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "poi src/index.js",
     "build": "poi build src/index.js",
+    "analyze": "poi build src/index.js --generate-stats stats.json",
     "deploy": "surge -p dist/ -d vue-prerender-spa-demo.surge.sh"
   },
   "dependencies": {
